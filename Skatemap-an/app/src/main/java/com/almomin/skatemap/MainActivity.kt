@@ -353,7 +353,7 @@ class MainActivity : AppCompatActivity() {
         /// getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
 
-        myWebView.loadUrl("https://skatemap.kr/skatemap%202.0.html")
+        myWebView.loadUrl("https://oldjeans.io/skatemap2.0.html")
     }
 
     private fun requestPermission() {
@@ -398,7 +398,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
-            if ("skatemap.kr" == Uri.parse(url).host) {
+            if ("oldjeans.io" == Uri.parse(url).host) {
                 // This is my website, so do not override; let my WebView load the page
                 Log.d("MYWEB", "skatemap host case")
                 return false
@@ -437,9 +437,9 @@ class MainActivity : AppCompatActivity() {
 
     fun onJsAlert(message : String, result : JsResult) : Unit{
         var builder = AlertDialog.Builder(this@MainActivity)
-        builder.setTitle("알 림")
+        builder.setTitle("알림")
         builder.setMessage(message)
-        builder.setIcon(R.mipmap.ic_launcher)
+        builder.setIcon(R.mipmap.ic_launcher20)
 
         // 버튼 클릭 이벤트
         var listener = DialogInterface.OnClickListener { _, clickEvent ->
@@ -455,9 +455,9 @@ class MainActivity : AppCompatActivity() {
 
     fun onJsConfirm(message : String, result : JsResult) : Unit {
         var builder = AlertDialog.Builder(this@MainActivity)
-        builder.setTitle("알 림")
+        builder.setTitle("알림")
         builder.setMessage(message)
-        builder.setIcon(R.mipmap.ic_launcher)
+        builder.setIcon(R.mipmap.ic_launcher20)
 
         // 버튼 클릭 이벤트
         var listener = DialogInterface.OnClickListener { _, clickEvent ->
